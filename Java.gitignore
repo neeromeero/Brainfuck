@@ -1,9 +1,9 @@
-.iml
-.idea
+.iml/
+.idea/
 .gradle/
 build/
 out/
-target/
+target/classes/
 java/io/
 
 # Compiled class file
