@@ -1,9 +1,10 @@
 .iml
-*.idea
+.idea
 .gradle/
 build/
 out/
 target/
+java/io/
 
 # Compiled class file
 *.class
