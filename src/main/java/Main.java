@@ -6,16 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Main {
 
   private static final int STACK_LENGTH = 10000;
   private static short[] arr = new short[STACK_LENGTH];
 
   //добавить чтение из файла
-  public static void main(String[] args) throws Exception{
+  public static void main(String[] args) throws Exception {
 
-    FileReader fr= new FileReader("C:\\Users\\v_dansker\\Desktop\\Лучшая Морковь\\BRAIN_FUCK\\Brainfuck\\src\\main\\resources\\test.txt");
+    FileReader fr = new FileReader(
+        "C:\\Users\\v_dansker\\Desktop\\Лучшая Морковь\\BRAIN_FUCK\\Brainfuck\\src\\main\\resources\\test.txt");
     Scanner scan = new Scanner(fr);
 
     while (scan.hasNextLine()) {
@@ -23,15 +23,13 @@ public class Main {
     }
 
     fr.close();
-    //String fileName = "C:\\Users\\v_dansker\\Desktop\\Лучшая Морковь\\BRAIN_FUCK\\Brainfuck\\src\\main\\resources\\test.txt";
-    //System.out.println(fileName);
 
     /*System.out.println(run("++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++\n" +
         ".>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.\n" +
         "------.--------.>+.>."));*/
   }
 
-  public static String run(String strCommand) {
+  private static String run(String strCommand) {
     StringBuilder retString = new StringBuilder();
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     List<Operations> Lexemes = Optimization.optimize(strCommand);
@@ -91,7 +89,6 @@ public class Main {
         }
         default:
           break;
-
       }
     }
     return retString.toString();
